@@ -1,0 +1,23 @@
+/* ==============================PALETA DE COLORES============================== */
+:root {
+/* Fuentes */
+    --font-main: "Poppins", sans-serif;
+/* Colores Principales */
+    --green-primary: #2F7339;/*texto boton de detalles*/
+    --green-secondary: #98BF45;/*borde boton detalles*/
+    --orange-accent: #F2762E;/*para el NavBar hover y boton search*/
+    --green-light: #678070; /*zona de contactos y texto placeholder del search*/
+/* Colores de Apoyo */
+    --green-dark: #194B36;/*para el NavBar, h1 y h2 y texto del botón y h5*/
+    --green-soft: #b0cf6d;/*borde del search*/
+/* Neutros */
+    --dark: #0D0D0D;
+    --gray-dark: #586942;/*para el p de la bienvenida y el caption*/
+    --light-bg: #F6F8F5;/*fondo y letras zona contacto*/
+    --white: #FFFFFF;/*para el Nav a y el fondo y texto del search*/
+/* Sombras y Efectos */
+    --shadow-color: rgba(0, 0, 0, 0.15);
+/* Alturas del navbar y del section contacto*/
+    --nav-height: 70px;/*la altura navbar*/
+    --contact-height: 60px;/*altura barra de contacto*/
+}

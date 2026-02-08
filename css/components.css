@@ -1,0 +1,272 @@
+/* =============================HERO============================= */
+#hero h1 {/*título ppal*/
+    color: var(--green-dark);
+    font-weight: 700;/*grosor bold*/
+    margin-top: 20px;/*20px antes del título para que no se pegue muy arriba*/
+}
+
+#hero p {/*subtitulos/párrafos*/
+    color: var(--gray-dark);
+    font-size: 1.1rem;/*un poco mnás grande ya q va bajo el título y es la bienvenida*/
+    padding: 20px 0;/*aire entre h1 y p*/
+}
+
+/* ========================INFO DE CONTACTO======================== */
+#fast-contact {/*el section que envuelve al contenedor*/
+    margin-top: 70px;/*ajustado según el alto del nav*/
+    background-color: var(--green-light);/*color para resaltarlo*/
+    color: var(--light-bg);
+    /* height: var(--contact-height);altura predefinida */
+    min-height: var(--contact-height);/*probando*/
+    display: flex;/*organización flexible y alineada*/
+    align-items: center;/*centrado vertical pq se queda pegado en su tope*/
+    padding: 5px 0;/*probando*/
+}
+
+#fast-contact .container {/*elimina margen del contenedor interno*/
+    display: flex;/*ubicación uno al lado del otro*/
+    justify-content: center;/*uno arriba de otro, antes estaba el between...*/
+    align-items: center;/*centrado vertical*/
+}
+
+#fast-contact i {/*etiqueta del contacto (num y text@)*/
+    margin-right: 8px !important;/*espacio entre el ícono y el contacto*/
+    color: var(--orange-accent);
+}
+
+/* =================ESTILO GLOBAL PARA BOTONES NARANJOS================= */
+.btn-magallanica {/*botón naranjo*/
+    color: var(--orange-accent);
+    border-radius: 32px;/*mismo redondeo que el input*/
+    padding: 0.5rem 1.5rem;/*vertical y horizontal para que sea más alargado otra opcion 8 25*/
+    border: 2px solid var(--orange-accent);
+    display: inline-block;/*comportamiento bloque: acepta márgenes y paddings pero ocupa el ancho de su contenido, no todo el ancho de la pantall*/
+}
+
+.input-magallanica {
+    margin-right: 0.5rem;
+    border: 2px solid var(--green-soft);/*contorno delgado*/
+    border-radius: 32px;/*redondeado un poco*/
+    background-color: var(--white);
+}
+
+.input-magallanica::placeholder {
+    color: var(--green-light);
+    opacity: 0.8;
+}
+
+/* ===========================BOTON SEARCH=========================== el input resalta en azul al presionarlo, hay que cambiar esto*/
+#search-bar-container {
+    margin-top: -0.5rem;/*margen para subir un poquito la barra*/
+}
+
+/* ===========================CARRUSEL=========================== */
+.section-title {/*título*/
+    color: var(--green-dark);
+    font-weight: 600;
+    margin-bottom: 30px;/*espacio entre título y carrusel*/
+}
+
+.carousel-item img {
+    object-fit: cover;/*imagen no se deforma*/
+    height: 200px;/*altura fija*/
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.carousel-caption {
+    position: static;/*texto bajo la img ya q bootstrap x defecto lo pone sobre la imagen*/
+    padding: 15px;/*margen interno para que el texto no toque el borde*/
+    background-color: var(--white);/*transparente*/
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);/*sombra suave hacia abajo*/
+}
+
+.carousel-caption h5 {/*título del producto destacado*/
+    color: var(--green-dark);
+}
+
+.carousel-caption p {/*descripción del producto destacado*/
+    color: var(--green-primary);
+}
+
+/* ====================CONTROLES DEL CARRUSEL==================== tengo que quitarlo pq no son necesarios, la idea es que pase sola (ya lo hace)*/ 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {/*flecha blanca con fondo circular*/
+    background-color: rgba(0, 0, 0, 0.3);/*fondo oscuro*/
+    border-radius: 50%;/*circular*/
+    padding: 15px;/*tamaño del círculo con un poco de espacio a su alrededor*/
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    opacity: 1 !important;/*brillo permanente*/
+}
+
+/* ====================CATÁLOGO DE PRODUCTOS==================== */
+#product-catalog {/*sección */
+    padding: 80px 0;/*espacio arriba y abajo para que no choque con el carrusel*/
+    background-color: var(--light-bg);/*para que resalten del fondo*/
+}
+
+#product-catalog .card {
+    border: none;/*sin borde*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);/*sombra en lugar del borde*/
+    border-radius: 15px;/*redondea esquinas*/
+    height: 100%;/*todas las tarjetas del mismo tamaño*/
+}
+
+#product-catalog .card-img-top {
+    height: 220px;/*mismo espacio vertical para todas las tarjetas*/
+    object-fit: contain;/*foto no se deforma*/
+    padding: 20px;/*foto no toca bordes*/
+}
+
+.card-title {
+    font-size: 1.1rem;/*un poquito más grande*/
+    font-weight: 700;/*título en negrita*/
+    color: var(--green-dark);
+}
+
+/*Pintar botón de naranja*/
+.btn-fav:focus, .btn-fav:active {/*esto tomará jquery cuadno se clickee*/
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-fav.active i {/*rellena el corazon cuando esté activo*/
+    color: var(--orange-accent) !important;
+}
+
+.btn-fav.active i {/*el corazón crece un poco cuando se active*/
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* TOAST */
+.toast {
+    border-radius: 12px;
+    overflow: hidden; /* para que el header respete bordes */
+}
+
+.toast-header {
+    background-color: var(--green-dark);
+    color: var(--white);
+    border-bottom: none;
+}
+
+.toast-header strong,
+.toast-header small {
+    color: var(--white);
+}
+
+.toast-header .btn-close {
+    filter: invert(1); /* botón close blanco */
+}
+
+.toast-body {
+    background-color: var(--white);
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+}
+
+
+/* ============================DESKTOP============================ */
+@media (min-width: 992px) {
+
+    /* ----------------CONTACTO RÁPIDO---------------- */
+    section#fast-contact {
+        height: 35px !important;/*centrado vertical para que el texto quede al medio*/
+        padding: 0 !important;/*padding y margin resetean espacios extra que bootstrap pone por defecto*/
+        margin-top: 0 !important;
+        display: flex !important;/*contenedor flexible para alinear elementos*/
+        align-items: center !important;/*centra verticalmente el contenedor dentro de la franja*/
+        position: relative;/*premite mover la barra o no serviría el top -30*/
+        top: -30px;/*sube la barra (problema con la posición del nav)*/
+    }
+
+    #fast-contact .container {
+        display: flex !important;/*contenedor flexible para alinear elementos*/
+        justify-content: space-between !important;/*contenido a los extremos*/
+        align-items: center !important;/*centra verticalmente íconos y textos*/
+        height: 100% !important;/*el contenedor interno ocupa los 35 de altura del padre*/
+        padding-top: 0 !important;/*como la barra es muy delgada cualquier cosa puede romper el alineado vertical*/
+        margin-top: 0 !important;/*obliga a que el contenedor empiece donde empieza la sección*/
+    }
+
+    #fast-contact p,/* Estilos unificados para texto e iconos */
+    #fast-contact span, 
+    #fast-contact a,
+    #fast-contact i {
+        margin: 0 !important;/*sin margenes internos*/
+        padding: 0 !important;/*sin margenes internos*/
+        font-size: 0.9rem;/*letra un poco más peq.*/
+        line-height: 35px !important; /* Centrado vertical matemático */
+        /* text-decoration: none;sin el subrayado azul de un enlace, esto iría si los íconos fueran clickeables a algún enlace pero no estoy segura de querer implementarlo*/
+    }
+
+    #fast-contact i {
+        margin-right: 8px !important;/*empuja texto hacia la derecha*/
+        color: var(--orange-accent);/*color solo al ícono*/
+    }
+
+    /* ----------------HERO Y CARRUSEL---------------- */
+    #hero {
+        padding-top: 40px;/*espacio para que no lo tape lo de arriba*/
+    }
+    
+    .carousel-item img {
+        height: 250px;/*imágen más baja que en el móvil*/
+        object-fit: contain;/*evita que se deformen*/
+        background-color: var(--light-bg);
+    }
+
+    .carousel-caption {
+        max-width: 500px;/*limita el ancho del texto porque se estiraba en todo el contenedor*/
+        margin: 0 auto 20px;/*centrado horizontal del texto*/
+        padding: 15px 30px;/*espacio interno 15vertical 30horizontal para que texto no toque bordes*/
+    }
+
+    .carousel-caption h5 {
+        margin-bottom: 5px;/*separa título de la descripción*/
+    }
+
+    .carousel-caption p {
+        margin-bottom: 10px;/*separa descripción del precio*/
+        font-size: 0.95rem;
+    }
+
+    /* ----------------CATÁLOGO DE PRODUCTOS---------------- */
+    #product-catalog {
+        padding: 80px 0;/*separación entre lo anterior y el inicio del catálogo*/
+    }
+
+    #product-catalog .card {/*todas las tarjetas de la fila con el mismo alto */
+        height: 100%;
+        display: flex;/*define sistema de diseño*/
+        flex-direction: column;/*define eje de trabajo, hacia donde apuntan los elementos*/
+    }
+
+    #product-catalog .card-img-top {/*imagen fija para alinear títulos */
+        height: 220px;
+        object-fit: contain;
+        padding: 20px;
+    }
+
+    #product-catalog .card-body {/*empuja el botón hacia abajo*/
+        display: flex;
+        flex-direction: column;/*organiza por columnas*/
+        justify-content: space-between;/*título arriba y el btn al fondo de la tarjeta*/
+        flex-grow: 1;/*todas las tarjetas con el mismo tamaño*/
+    }
+
+    #product-catalog .card:hover {/*tarjeta flota hacia arriba cuando se mueve el mouse*/
+    transform: translateY(-10px);
+    }
+
+    /* ----------------BTN MAGALLANICA HOVER---------------- */
+    .btn-magallanica:hover {
+        background-color: var(--orange-accent);
+        color: var(--white);
+    }
+}

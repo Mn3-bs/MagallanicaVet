@@ -1,0 +1,31 @@
+/* ===============================RESET=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*con esto puedo ver que elemento sobresale y me da error*/
+    /* outline: 1px solid rgba(0, 0, 255, 0.2); */
+}
+
+/* ================================BASE================================ */
+body {
+    background-color: var(--light-bg);
+    font-family: var(--font-main);
+    font-weight: 400;
+    line-height: 1.6;/*textos no apretados*/
+    min-height: 100vh;/*altura minima 100% de la pantalla*/
+    /*con esto puedo ver que elemento sobresale y me da error*/
+    /* outline: 2px solid red; */
+}
+
+/* ==============================DESKTOP============================== */
+@media (min-width: 992px) {/*espacio para que el contenido no se esconda del menú*/
+    main {
+        padding-top: var(--nav-height);/*espacio interno sup para que el contenido no suba a la parte sup y quede tras el nav*/
+    }
+}
+
+/*con esto puedo ver que elemento sobresale y me da error*/
+/* .row {
+  outline: 2px solid rgb(0, 234, 255);
+} */

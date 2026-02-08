@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MagallánicaVet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><!--iconos-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+    <body class="">
+
+        <header>
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-dark fixed-top"> <!--borro el bg-body-tertiary pq usaré mis propios colores-->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="/assets/images/logoconfondo.jpeg" alt="logoMagallanicaVet" id="main-logo">                        
+                    </a>
+
+                    <!--Hamburguesa botón-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side-menu" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--/Hamburguesa botón-->
+
+                    <!--Hamburguesa Options -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="side-menu" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="menu-title">MagallanicaVet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <!-- Opciones del menú -->
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="start-menu" aria-current="page" href="#">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Nosotros</a> <!-- Acá igual irá el contacto -->
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Productos
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Perros y Gatos</a></li>
+                                        <li><a class="dropdown-item" href="#">Conejos y otros</a></li>
+                                        <li><a class="dropdown-item" href="#">Ganadería y Jardín</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Servicios</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control input-magallanica" type="search" placeholder="Search" aria-label="Search" id="search-input-nav"/>
+                                <button class="btn btn-magallanica" type="submit" id="btn-search-nav">Búsqueda</button>
+                            </form>
+                        </div>
+                        <!-- /Opciones del menú -->
+                    </div>
+                    <!--/Hamburguesa Options -->
+
+                </div>
+            </nav>
+            <!-- /NAVBAR -->
+        </header>
+
+        <!-- CONTENEDOR GENERAL -->
+        <main>
+            <!-- INFORMACIÓN DE CONTACTO BAJO EL NAVBAR, DELGADO CON SOLO NUMERO Y CORREO -->
+            <section id="fast-contact" class="container-fluid"><!--container-fluid para que el color ocupe todo el section-->
+                <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center small"><!--contenedor para alinear los contactos en cajas dentro y así no quede todo pegado al borde-->
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i><span>+56 9 8956 4496</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i><span>magallanicaVet@gmail.com</span>
+                    </div>
+                </div>
+            </section>
+            <!-- /INFORMACIÓN DE CONTACTO BAJO EL NAVBAR, DELGADA CAJA CON SOLO NUMERO Y CORREO Y UN COLOR LIGERAMENTE DIFERENTE-->
+            
+            <!-- BIENVENIDA A LA PAGINA -->
+            <section id="hero">
+                <!-- TITULOS Y BUSQUEDA -->
+                <div class="container text-center">
+                    <h1>Farmacia Agroveterinaria con Atención Profesional</h1>
+                    <p>Atención veterinaria, asesoría experta y productos confiables para el cuidado animal y del entorno.</p>
+
+                    <!-- BARRITA DE BÚSQUEDA -->
+                    <div id="search-bar-container" class="container"><!--centra el contenido en la pantalla con márgenes automáticos-->
+                        <div class="row justify-content-center"><!--sistema grid para usar columnas-->
+                            <div class="col-12 col-md-6"><!--moviles 12 col osea el 100% del ancho / pc la mitad-->
+                                <form class="d-flex" role="search"><!--input y botón a lado del otro-->
+                                    <input class="form-control input-magallanica" type="search" placeholder="¿Qué buscas?" id="search-input-hero"/>
+                                    <button class="btn btn-magallanica" type="submit" id="btn-search-hero">Buscar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /BARRITA DE BÚSQUEDA -->
+                </div>
+                <!-- /TITULOS Y BUSQUEDA -->
+            </section>
+            <!-- /BIENVENIDA A LA PAGINA -->
+
+            <!-- CAROUSEL DE PRODUCTOS DESTACADOS -->
+            <section id="featured-product">
+                <div class="container">
+                    <!-- Título -->
+                    <div class="row"><!--orden en fila-->
+                        <div class="col-12 text-center"><!--ocupa el 100% y al centro-->
+                            <h2 class="section-title">Productos Destacados</h2>
+                        </div>
+                    </div>
+                    <!-- /Título -->
+                
+                    <div class="row"><!--misma lógica de arriba, div padre para organizar-->
+                        <div class="col-10 col-md-10 col-lg-8 mx-auto"><!--móvil/tablet/pc pora que sea responsivo-->
+                            <!-- Carousel -->
+                            <div id="carouselProduct" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+                                <div class="carousel-inner">
+
+                                    <!-- Producto 1 -->
+                                    <div class="carousel-item active">
+                                        <img src="/assets/images/food1.jpg" class="d-block w-100" alt="Alimento Gato">
+                                        <div class="carousel-caption"><!--descripción y precio-->
+                                            <h5>Alimento Premium Perro Adulto</h5>
+                                            <p>Alimento completo para perros adultos, formulado para una digestión saludable, pelaje brillante y óptimo nivel de energía.</p>
+                                            <p class="price">$24.990 CLP</p>
+                                            <a href="#" class="btn btn-magallanica">Ver detalles</a>
+                                        </div>
+                                    </div>
+                                    <!-- /Producto 1 -->
+
+                                    <!-- Producto 2 -->
+                                    <div class="carousel-item">
+                                        <img src="/assets/images/food2.jpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption"><!--descripción y precio-->
+                                            <h5>Antiparasitario Interno y Externo Gatos</h5>
+                                            <p>Tratamiento efectivo contra pulgas, garrapatas y parásitos internos. Seguro y recomendado por médicos veterinarios.</p>
+                                            <p class="price">$12.490 CLP</p>
+                                            <a href="#" class="btn btn-magallanica">Ver detalles</a>
+                                        </div>
+                                    </div>
+                                    <!-- /Producto 2 -->
+
+                                    <!-- Producto 3 -->
+                                    <div class="carousel-item">
+                                        <img src="/assets/images/food3.jpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption"><!--descripción y precio-->
+                                            <h5>Vitaminas y Minerales Ganado Bovino</h5>
+                                            <p>Suplemento vitamínico que mejora el rendimiento, la inmunidad y el estado general del ganado. Ideal para etapas de alta demanda nutricional.</p>
+                                            <p class="price">$24.990 CLP</p>
+                                            <a href="#" class="btn btn-magallanica">Ver detalles</a>
+                                        </div>
+                                    </div>
+                                    <!-- /Producto 3 -->
+
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <!-- /Carousel -->
+                        </div>
+                    </div><!---->
+                </div>
+            </section>
+            <!-- /CAROUSEL DE PRODUCTOS DESTACADOS -->
+             
+            <!-- LISTA DE PRODUCTOS -->
+            <section id="product-catalog">
+                <div class="container"><!--container-->
+                    <h2 class="text-center">Catálogo de productos</h2>
+                    <div class="row g-4"><!--row-->
+
+                        <!-- producto 1 -->
+                        <div class="col-md-4 col-sm-6"><!--col-->
+                            <div class="card">
+                                <img src="/assets/images/food1.jpg" class="card-img-top" alt="Producto 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Producto 1</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <button class="btn btn-fav p-0 border-0" data-name="Producto 1">
+                                            <i class="bi bi-heart fs-3"></i>
+                                        </button>
+                                        <span>Agregar a Favoritos!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /producto 1 -->
+
+                        <!-- producto 2 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="/assets/images/food2.jpg" class="card-img-top" alt="Producto 2">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Producto 2</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <button class="btn btn-fav p-0 border-0" data-name="Producto 2">
+                                            <i class="bi bi-heart fs-3"></i>
+                                        </button>
+                                        <span>Agregar a Favoritos!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /producto 2 -->
+
+                        <!-- producto 3 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="/assets/images/food3.jpg" class="card-img-top" alt="Producto 3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Producto 3</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <button class="btn btn-fav p-0 border-0" data-name="Producto 3">
+                                            <i class="bi bi-heart fs-3"></i>
+                                        </button>
+                                        <span>Agregar a Favoritos!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /producto 3 -->
+
+                        <!-- producto 4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="/assets/images/food4.jpg" class="card-img-top" alt="Producto 4">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Producto 4</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <button class="btn btn-fav p-0 border-0" data-name="Producto 4">
+                                            <i class="bi bi-heart fs-3"></i>
+                                        </button>
+                                        <span>Agregar a Favoritos!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /producto 4 -->
+
+                        <!-- producto 5 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="/assets/images/perfil.jpg" class="card-img-top" alt="Producto 5">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Producto 5</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <button class="btn btn-fav p-0 border-0" data-name="Producto 5">
+                                            <i class="bi bi-heart fs-3"></i>
+                                        </button>
+                                        <span>Agregar a Favoritos!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /producto 5 -->
+
+                        <!-- producto 6 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="/assets/images/perfil-back.jpg" class="card-img-top" alt="Producto 6">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Producto 6</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <button class="btn btn-fav p-0 border-0" data-name="Producto 6">
+                                            <i class="bi bi-heart fs-3"></i>
+                                        </button>
+                                        <span>Agregar a Favoritos!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /producto 6 -->
+
+                    </div>
+                </div>
+            </section>
+            <!-- /LISTA DE PRODUCTOS -->
+        </main>
+        <!-- /CONTENEDOR GENERAL -->
+
+        <!-- TOAST DE AVISO -->   
+        <div class="container"><!--contenedor-->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3"><!--toast-->
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"><!--body toast-->
+                    <div class="toast-header gap-2">
+                        <i class="fa-solid fa-paw" style="color: #f2762e;"></i>
+                        <strong class="me-auto">Listo!</strong>
+                        <small></small><!--tarea pendiente: capturar tiempo atrás para mostrar-->
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body"></div><!--mensaje emergente-->
+                </div>
+            </div>
+        </div>
+        <!-- TOAST DE AVISO -->
+
+        <!-- FOOTER -->
+        <footer>
+        </footer>
+        <!-- /FOOTER -->
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="/js/script.js"></script>
+    
+    </body>
+
+</html>

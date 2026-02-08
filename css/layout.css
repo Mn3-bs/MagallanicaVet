@@ -1,0 +1,87 @@
+/* ===================================NAVBAR=================================== anda bien la versión desktop, la versión movil se mueve un poco al scrolear, intente solucionarlo pero no pude. otro día sigo intentando */
+.navbar {/*nav con color verdoso*/
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    background-color: var(--green-dark);
+}
+
+.navbar > .container-fluid {/*contenedor interno directo del nav*/
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;/*modo caja flexible para alinear hijos*/
+    align-items: center;/*centra verticalmente el logo y el botón hamburguesa*/
+}
+
+.navbar-brand {/*enlace que envuelve al logo */
+    padding: 0;/*quita el espacio interno que Bootstrap pone por defecto*/
+    margin: 0;/*elimina márgenes externos que desplazan el logo a la derecha*/
+    display: flex;/*contenido interno del enlace = flex*/
+    align-items: center;/*imagen dentro del enlace centrada*/
+}
+
+#main-logo {/*tamaño del contenedor*/
+    width: 55px;/*mismo tamaño alto y ancho porque el logo es un cuadrado y no he podido quitarle el fondo blanco*/
+    height: 55px;/*lo quiero redondo*/
+    clip-path: circle(46%);/*como un molde de galletas que recorta hacia adentro*/
+    object-fit: cover;/*la imagen ocupa todo el espacio del contenedor*/
+    object-position: center;/*alinea y centra la imagen en el contenedor*/
+}
+
+/* =============================NAVBAR:DESPLEGABLE============================= */
+.offcanvas {/*nav cuando se abre, tambien color verdoso*/
+   background-color: var(--green-dark); 
+}
+
+.navbar-nav .nav-link,/*todas las letras del nav blancas, incluso para la clase .active del bootstrap*/
+.navbar-nav .nav-link.active, 
+.offcanvas-title {
+    color: var(--white) !important;
+}
+
+.btn-close {/*la X para cerrar el nav: blanca*/
+    filter: invert(1);
+    opacity: 1;
+}
+
+/* ============================PRODUCTOS DESTACADOS============================ */
+#featured-product {
+    padding: 60px 0;/*separación entre el search y la sección de productos destacados*/
+}
+
+/* ==================================DESKTOP================================== */
+@media (min-width: 992px) {
+    :root {
+        --nav-height: 90px;/*nav más grande para logo más grande*/
+    }
+
+    #main-logo {
+        height: 50px;/*nuevo tamaño*/
+        width: 50px;
+        clip-path: circle(46%);/*zoom interno para quitar la parte blanca*/
+    }
+
+     .navbar {
+        position: fixed;/*nav pegado arriba*/
+        top: 0;/*top, left y right para que ocupe todo el espacio*/
+        left: 0;
+        right: 0;
+        padding-top: 1px !important;/*no toque los bordes*/
+        padding-bottom: 1px !important;
+        margin-bottom: 0 !important;/*elimina espacios exteriores*/
+        min-height: 0 !important;/*uso altura propia*/
+        height: 60px !important; /*alto exacto*/
+    }
+
+    .navbar > .container-fluid {/*detecta al hijo directo*/
+        padding-left: 24px;/*espacios a la derecha y a la izq*/
+        padding-right: 24px;
+    }
+
+    .navbar-brand img {/*clase estandar bootstrap para achicar logo, el navbar estaba muy grande*/
+        height: 50px;/*altura fija un poco más chica que el nav (60)*/
+        width: auto;/*no se deforma*/
+        /* transition: all 0.3s ease;por si le pongo un hover*/
+    }
+}
