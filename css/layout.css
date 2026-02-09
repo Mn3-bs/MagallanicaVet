@@ -45,10 +45,17 @@
     opacity: 1;
 }
 
-/* ============================PRODUCTOS DESTACADOS============================ */
-#featured-product {
-    padding: 60px 0;/*separación entre el search y la sección de productos destacados*/
+/* ===================================FOOTER=================================== */
+footer {
+    /* border-top: 3px solid var(--green-dark); */
+    background-color: var(--green-dark);
+    color: var(--white);
 }
+
+footer i {
+    color: var(--white) !important;
+}
+
 
 /* ==================================DESKTOP================================== */
 @media (min-width: 992px) {
@@ -83,5 +90,13 @@
         height: 50px;/*altura fija un poco más chica que el nav (60)*/
         width: auto;/*no se deforma*/
         /* transition: all 0.3s ease;por si le pongo un hover*/
+    }
+
+    footer .btn-outline:hover {
+        border-color: var(--orange-accent) !important;
+    }
+
+    footer .btn-outline:hover i {
+        color: var(--orange-accent) !important;
     }
 }
