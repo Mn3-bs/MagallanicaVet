@@ -60,7 +60,11 @@
     margin-top: -0.5rem;/*margen para subir un poquito la barra*/
 }
 
-/* ===========================CARRUSEL=========================== */
+/* ===========================CARRUSEL PRODUCTOS DESTACADOS=========================== */
+#featured-product {
+    padding: 60px 0;/*separación entre el search y la sección de productos destacados*/
+}
+
 .section-title {/*título*/
     color: var(--green-dark);
     font-weight: 600;
